@@ -1,0 +1,28 @@
+name: TSLride
+version: '1.0'
+main: org.tsl.tSLride.TSLride
+api-version: '1.21'
+authors: [ Zvbj ]
+description: 一个允许玩家右键骑乘任意生物的插件，支持 Folia 1.21+
+folia-supported: true
+
+commands:
+  tslride:
+    description: TSLride 主命令
+    usage: /<command> [toggle|reload|help]
+    aliases: [tride]
+    permission: tslride.use
+
+permissions:
+  tslride.use:
+    description: 允许玩家使用右键骑乘功能
+    default: true
+  tslride.toggle:
+    description: 允许玩家使用指令开关自己是否开启骑乘
+    default: true
+  tslride.reload:
+    description: 允许管理员热重载插件配置
+    default: op
+  tslride.bypass.blacklist:
+    description: 无视黑名单，可以骑任何生物
+    default: op

@@ -1,0 +1,28 @@
+# TSLride 插件配置文件
+
+# 是否开启debug模式
+debug: false
+
+# 默认是否允许骑乘（玩家可以通过指令临时切换）
+default-enabled: true
+
+# 不允许骑乘的实体类型（使用Bukkit的EntityType名称）
+blacklist:
+  - WITHER
+  - ENDER_DRAGON
+  - WARDEN
+  - GHAST
+  - ELDER_GUARDIAN
+
+# 消息配置
+messages:
+  prefix: "&6[TSLride] &r"
+  no-permission: "&c你没有权限使用此功能！"
+  toggle-enabled: "&a骑乘功能已开启！"
+  toggle-disabled: "&c骑乘功能已关闭！"
+  blacklist-entity: "&c该生物在黑名单中，无法骑乘！"
+  config-reloaded: "&a配置文件已重新加载！"
+  help-header: "&6=== TSLride 帮助 ==="
+  help-toggle: "&e/tslride toggle &7- 切换骑乘功能开关"
+  help-reload: "&e/tslride reload &7- 重新加载配置文件"
+  invalid-command: "&c无效的命令参数！使用 /tslride help 查看帮助"
