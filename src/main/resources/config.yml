@@ -20,7 +20,6 @@ messages:
   no-permission: "&c你没有权限使用此功能！"
   toggle-enabled: "&a骑乘功能已开启！"
   toggle-disabled: "&c骑乘功能已关闭！"
-  blacklist-entity: "&c该生物在黑名单中，无法骑乘！"
   config-reloaded: "&a配置文件已重新加载！"
   help-header: "&6=== TSLride 帮助 ==="
   help-toggle: "&e/tslride toggle &7- 切换骑乘功能开关"

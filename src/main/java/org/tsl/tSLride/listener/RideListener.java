@@ -42,7 +42,7 @@ public class RideListener implements Listener {
         if (plugin.getConfigManager().isBlacklisted(entityType)) {
             // 检查是否有绕过黑名单的权限
             if (!player.hasPermission("tslride.bypass.blacklist")) {
-                player.sendMessage(plugin.getConfigManager().getMessageWithPrefix("blacklist-entity"));
+                // 静默返回，不显示任何提示消息
                 return;
             }
         }
