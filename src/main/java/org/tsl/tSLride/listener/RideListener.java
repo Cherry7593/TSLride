@@ -1,5 +1,6 @@
 package org.tsl.tSLride.listener;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -8,6 +9,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.ItemStack;
 import org.tsl.tSLride.TSLride;
 
 public class RideListener implements Listener {
@@ -29,6 +31,12 @@ public class RideListener implements Listener {
 
         // 检查玩家是否开启了骑乘功能
         if (!plugin.getPlayerDataManager().isRideEnabled(player)) {
+            return;
+        }
+
+        // 检查玩家是否空手（主手必须为空）
+        ItemStack mainHandItem = player.getInventory().getItemInMainHand();
+        if (mainHandItem.getType() != Material.AIR) {
             return;
         }
 

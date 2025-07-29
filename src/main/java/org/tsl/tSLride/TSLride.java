@@ -24,8 +24,12 @@ public final class TSLride extends JavaPlugin {
 
         // 注册命令
         TSLrideCommand commandExecutor = new TSLrideCommand(this);
-        getCommand("tslride").setExecutor(commandExecutor);
-        getCommand("tslride").setTabCompleter(commandExecutor);
+        if (getCommand("tslride") != null) {
+            getCommand("tslride").setExecutor(commandExecutor);
+            getCommand("tslride").setTabCompleter(commandExecutor);
+        } else {
+            getLogger().severe("无法注册命令 'tslride'，请检查 plugin.yml 配置！");
+        }
 
         getLogger().info("TSLride 插件已启用！支持 Folia 多线程环境");
 
